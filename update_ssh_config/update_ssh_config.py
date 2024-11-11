@@ -41,7 +41,7 @@ def remove_hosts(args):
         if len(kv) > 1:
             key, value = kv
             if key.lower() == "host":
-                if value in hosts:
+                if value.split(' ')[0] in hosts:
                     rm_this_host = True
                     continue
                 else:
